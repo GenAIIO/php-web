@@ -1,0 +1,234 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8b395f69ded7677fed226c3dd2f5d9cd",
+    "packages": [
+        {
+            "name": "genai/container",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../php-container",
+                "reference": "fd041e50ec0843e1298f91416e0b638f88ad518c"
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/container": "1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GenAI\\Container\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Minimal PSR-11 dependency-injection container, compatible with PHP 5.3.29",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "genai/http",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../php-http",
+                "reference": "125f8b7b13b9537625cd75fc5324a7bdc5f01225"
+            },
+            "require": {
+                "genai/container": "*",
+                "genai/routing": "*",
+                "php": ">=5.3.0",
+                "psr/http-message": "1.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GenAI\\Http\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Minimal HTTP layer (Request/Response/JsonResponse) and a Dispatcher that wires the router and container, compatible with PHP 5.3.29",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "genai/routing",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../php-routing",
+                "reference": "a7fa88f85e886635e0b041ec8d2643b6967a5e4b"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "genai/attribute": "PHP 8 build-time #[Route] scanning via GenAI\\Routing\\Attribute\\RouteProcessor (the runtime stays PHP 5.3)."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GenAI\\Routing\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Minimal PSR-4 pure route matching engine, compatible with PHP 5.3.29",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "genai/view",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../php-view",
+                "reference": "bca21cadad58a25a7851359eb109a2334b0d5774"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GenAI\\View\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Minimal PHP template renderer producing HTML strings, compatible with PHP 5.3.29",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/master"
+            },
+            "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
+            "time": "2016-08-06T14:39:51+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}

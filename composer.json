@@ -1,0 +1,45 @@
+{
+    "name": "genai/web",
+    "version": "1.0.0",
+    "description": "Web/MVC layer over genai/http: #[Controller]/#[RestController] (with a base path) and #[Route] attributes, a View value object, a default genai/view engine (override with #[ViewRegister]), and a dispatcher. Routes compile to genai/routing's standalone matcher. Runtime is PHP 5.3-safe; the attributes/processors are PHP 8 build-time.",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+        { "type": "path", "url": "../php-routing" },
+        { "type": "path", "url": "../php-container" },
+        { "type": "path", "url": "../php-http" },
+        { "type": "path", "url": "../php-attribute" },
+        { "type": "path", "url": "../php-di" },
+        { "type": "path", "url": "../php-view" },
+        { "type": "path", "url": "../php-session" },
+        { "type": "path", "url": "../php-boot" }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "genai/routing": "*",
+        "genai/container": "*",
+        "genai/http": "*",
+        "genai/view": "*",
+        "genai/boot": "*"
+    },
+    "suggest": {
+        "genai/attribute": "PHP 8 build-time scanning of #[Controller]/#[RestController]/#[Route]/#[ViewRegister].",
+        "genai/di": "The attributes extend GenAI\\Di\\Component so the di processor registers controllers as beans.",
+        "genai/dto": "Provides the Serializer for Dispatcher::setSerializer() — JSON-serialize #[Dto] results.",
+        "genai/session": "Backs Csrf / CsrfInterceptor (the token store); only loaded if you use CSRF."
+    },
+    "extra": {
+        "genai": {
+            "processors": [
+                "GenAI\\Web\\Processor\\RouteProcessor",
+                "GenAI\\Web\\Processor\\WebProcessor"
+            ],
+            "autoconfig": ["GenAI\\Web\\WebAutoConfig"]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GenAI\\Web\\": "src/"
+        }
+    }
+}

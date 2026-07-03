@@ -1,0 +1,27 @@
+{
+    "name": "genai/web-demo",
+    "type": "project",
+    "repositories": [
+        { "type": "path", "url": ".." },
+        { "type": "path", "url": "../../php-attribute" },
+        { "type": "path", "url": "../../php-di" },
+        { "type": "path", "url": "../../php-container" },
+        { "type": "path", "url": "../../php-routing" },
+        { "type": "path", "url": "../../php-http" },
+        { "type": "path", "url": "../../php-view" },
+        { "type": "path", "url": "../../php-dto" }
+    ],
+    "require": {
+        "genai/web": "*",
+        "genai/di": "*",
+        "genai/view": "*",
+        "genai/attribute": "*",
+        "genai/dto": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demo\\": "fixtures",
+            "Cache\\": "cache/"
+        }
+    }
+}
