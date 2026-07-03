@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Web/MVC layer over genai/http: #[Controller]/#[RestController] (with a base path) and #[Route] attributes, a View value object, a default genai/view engine (override with #[ViewRegister]), and a dispatcher. Routes compile to genai/routing's standalone matcher. Runtime is PHP 5.3-safe; the attributes/processors are PHP 8 build-time.",
     "type": "library",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "repositories": [
         { "type": "path", "url": "../php-routing" },
         { "type": "path", "url": "../php-container" },
